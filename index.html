@@ -1,0 +1,640 @@
+<!-- saved from url=(0066)https://google.github.io/tacotron/publications/speaker_adaptation/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Audio samples from "Context Understanding with Contextual Embeddings for Multi-Talker Speech Separation and
+        Recognition in A Cocktail Party"</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+
+<body>
+    <article>
+        <header>
+            <h1>Audio samples from "Context Understanding with Contextual Embeddings for Multi-Talker Speech Separation
+                and
+                Recognition in A Cocktail Party"</h1>
+        </header>
+    </article>
+
+    <p><b>Authors:</b> Anonymous</p>
+
+    <p><b>Abstract:</b>
+        Multi-talker speech separation and recognition are two key tasks in the cocktail party problem, where multiple
+        speakers talk simultaneously and produce overlapped speech.
+        Although various deep learning based methods have been developed to address these problems, there is still a
+        large
+        performance gap between machines and humans.
+        Inspired by humans' hearing mechanism, which allows us to trace and distinguish the interested speaker from the
+        multi-talker mixed speech by understanding the context, this paper explores the usage of contextual information
+        to
+        improve both monaural speech separation and multi-talker recognition.
+        We propose a novel architecture to learn contextual embeddings from the speech mixture directly and then assist
+        the context understanding for the machines.
+        Specifically, an embedding predictor is learned from a encoder-decoder based single-talker speech recognition
+        teacher model.
+        Then, we explore several approaches to integrate the context embeddings into speech separation and multi-talker
+        speech recognition systems. Furthermore, a novel embedding sampling strategy is designed to improve the model
+        optimization.
+        We evaluate the proposed architectures on the artificially generated WSJ0-2mix datasets, and the newly proposed
+        method brings a large improvement on both multi-talker speech separation and recognition.
+        Additional analysis on the contextual embeddings also demonstrates that these embeddings directly learned from
+        the
+        multi-talker mixed audio can well capture the context information for each speaker, and they can be well
+        segregated on the contextual space which is very useful for the multi-talker speech separation and recognition.
+    </p>
+
+    <h2>Speech Separation Audio Samples:</h2>
+    <p><b>+CTX:</b> The speech separation system is trained with the proposed sampling strategy using both oralce and
+        predicted contextual embeddings, and the evaluation is with predicted embeddings (the last line of Table 1 in
+        the
+        paper).</p>
+    <h2>Male-Male:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample ID</th>
+                <th>Overlapped Speech</th>
+                <th>Model</th>
+                <th>Separated Speaker 1</th>
+                <th>Separated Speaker 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="1">M-M-1</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22gc010n_0.74637_443o030z_-0.74637.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/22g_443_22gc010n_0.74637_443o030z_-0.74637.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">M-M-2</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/443_22h_443o030w_0.5097_22hc010g_-0.5097.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/443_22h_443o030w_0.5097_22hc010g_-0.5097.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">M-M-3</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22go010h_1.174_443c020z_-1.174.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22go010h_1.174_443c020z_-1.174.spk1.gt.wav" type="audio/wav">
+                        </audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/22g_443_22go010h_1.174_443c020z_-1.174.spk2.gt.wav" type="audio/wav">
+                        </audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/22g_443_22go010h_1.174_443c020z_-1.174.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/22g_443_22go010h_1.174_443c020z_-1.174.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/22g_443_22go010h_1.174_443c020z_-1.174.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/22g_443_22go010h_1.174_443c020z_-1.174.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/22g_443_22go010h_1.174_443c020z_-1.174.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/22g_443_22go010h_1.174_443c020z_-1.174.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/22g_443_22go010h_1.174_443c020z_-1.174.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/22g_443_22go010h_1.174_443c020z_-1.174.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>Female-Female:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample ID</th>
+                <th>Overlapped Speech</th>
+                <th>Model</th>
+                <th>Separated Speaker 1</th>
+                <th>Separated Speaker 2</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th rowspan="1">F-F-1</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/420_445_420o0308_0.45776_445o0303_-0.45776.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/420_445_420o0308_0.45776_445o0303_-0.45776.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/420_445_420o0308_0.45776_445o0303_-0.45776.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/420_445_420o0308_0.45776_445o0303_-0.45776.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/420_445_420o0308_0.45776_445o0303_-0.45776.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/420_445_420o0308_0.45776_445o0303_-0.45776.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/420_445_420o0308_0.45776_445o0303_-0.45776.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/420_445_420o0308_0.45776_445o0303_-0.45776.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/420_445_420o0308_0.45776_445o0303_-0.45776.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/420_445_420o0308_0.45776_445o0303_-0.45776.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/420_445_420o0308_0.45776_445o0303_-0.45776.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">F-F-2</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/421_441_421c020q_0.38291_441o0303_-0.38291.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/421_441_421c020q_0.38291_441o0303_-0.38291.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/421_441_421c020q_0.38291_441o0303_-0.38291.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/421_441_421c020q_0.38291_441o0303_-0.38291.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/421_441_421c020q_0.38291_441o0303_-0.38291.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/421_441_421c020q_0.38291_441o0303_-0.38291.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/421_441_421c020q_0.38291_441o0303_-0.38291.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/421_441_421c020q_0.38291_441o0303_-0.38291.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/421_441_421c020q_0.38291_441o0303_-0.38291.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/421_441_421c020q_0.38291_441o0303_-0.38291.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/421_441_421c020q_0.38291_441o0303_-0.38291.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">F-F-3</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/445_421_445o030v_2.1753_421c0210_-2.1753.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/445_421_445o030v_2.1753_421c0210_-2.1753.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/445_421_445o030v_2.1753_421c0210_-2.1753.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/445_421_445o030v_2.1753_421c0210_-2.1753.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/445_421_445o030v_2.1753_421c0210_-2.1753.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/445_421_445o030v_2.1753_421c0210_-2.1753.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/445_421_445o030v_2.1753_421c0210_-2.1753.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/445_421_445o030v_2.1753_421c0210_-2.1753.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/445_421_445o030v_2.1753_421c0210_-2.1753.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/445_421_445o030v_2.1753_421c0210_-2.1753.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/445_421_445o030v_2.1753_421c0210_-2.1753.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <hr>
+    <h2>Female-Male:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sample ID</th>
+                <th>Overlapped Speech</th>
+                <th>Model</th>
+                <th>Separated Speaker 1</th>
+                <th>Separated Speaker 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="1">F-M-1</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_421_422o030k_1.1216_421a010a_-1.1216.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_421_422o030k_1.1216_421a010a_-1.1216.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_421_422o030k_1.1216_421a010a_-1.1216.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_421_422o030k_1.1216_421a010a_-1.1216.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_421_422o030k_1.1216_421a010a_-1.1216.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_421_422o030k_1.1216_421a010a_-1.1216.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_421_422o030k_1.1216_421a010a_-1.1216.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_421_422o030k_1.1216_421a010a_-1.1216.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_421_422o030k_1.1216_421a010a_-1.1216.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_421_422o030k_1.1216_421a010a_-1.1216.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_421_422o030k_1.1216_421a010a_-1.1216.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">F-M-2</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_442_422o0308_1.9049_442c0206_-1.9049.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_442_422o0308_1.9049_442c0206_-1.9049.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_442_422o0308_1.9049_442c0206_-1.9049.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_442_422o0308_1.9049_442c0206_-1.9049.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_442_422o0308_1.9049_442c0206_-1.9049.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_442_422o0308_1.9049_442c0206_-1.9049.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_442_422o0308_1.9049_442c0206_-1.9049.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_442_422o0308_1.9049_442c0206_-1.9049.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_442_422o0308_1.9049_442c0206_-1.9049.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_442_422o0308_1.9049_442c0206_-1.9049.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_442_422o0308_1.9049_442c0206_-1.9049.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+            <tr>
+                <th rowspan="1">F-M-3</th>
+                <td rowspan="1"> <audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_445_422a010s_1.7295_445o030m_-1.7295.mix.wav" type="audio/wav">
+                        </audio></td>
+                <th>Reference Audio</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_445_422a010s_1.7295_445o030m_-1.7295.spk1.gt.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/mix/422_445_422a010s_1.7295_445o030m_-1.7295.spk2.gt.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>ResNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_445_422a010s_1.7295_445o030m_-1.7295.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_base/422_445_422a010s_1.7295_445o030m_-1.7295.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_445_422a010s_1.7295_445o030m_-1.7295.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/cnn_op/422_445_422a010s_1.7295_445o030m_-1.7295.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>TasNet Baseline</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_445_422a010s_1.7295_445o030m_-1.7295.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_base/422_445_422a010s_1.7295_445o030m_-1.7295.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>+ CTX</th>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_445_422a010s_1.7295_445o030m_-1.7295.spk1.pr.wav"
+                            type="audio/wav"></audio></td>
+                <td><audio preload="none" controls="">
+                        <source src="./wavs_id/tas_op/422_445_422a010s_1.7295_445o030m_-1.7295.spk2.pr.wav"
+                            type="audio/wav"></audio></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+<script>
+    var audios = document.getElementsByTagName("audio");
+    // 暂停函数
+    function pauseAll() {
+        var self = this;
+        [].forEach.call(audios, function (i) {
+            // 将audios中其他的audio全部暂停
+            i !== self && i.pause();
+        })
+    }
+    // 给play事件绑定暂停函数
+    [].forEach.call(audios, function (i) {
+        i.addEventListener("play", pauseAll.bind(i));
+    })
+</script>
+
+</html>
